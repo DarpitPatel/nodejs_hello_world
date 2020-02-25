@@ -7,7 +7,7 @@ var server = http.createServer(function(request, response) {
 
 });
 
-var port = 80;
+var port = 8080;
 server.listen(port);
 
-console.log("Server running at https://azurenet/:%d", port);
+console.log("Server running at http://osc-sams.azurewebsites.net/:%d", port);
