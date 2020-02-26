@@ -18,4 +18,24 @@ var cron = require('node-cron');
 
 cron.schedule('* * * * *', () => {
  console.log('running a task every minute');
+ fetch('https://agentanswercenter--tst.custhelp.com/services/rest/connect/v1.3/incidents/10654347', {
+    method: 'GET',
+    withCredentials: true,
+    credentials: 'include',
+    headers: {
+        'Authorization': 'Basic ZDBwMDEyaDpXYWxtYXJ0MQ=='       
+    }
+}).then(responseJson => {
+    var items = JSON.parse(responseJson._bodyInit);
+    console.log(responseJson);
+
+})
+.catch(error => this.setState({
+    isLoading: false,
+    message: 'Something bad happened ' + error
+}));
+
+
+
+
 });
