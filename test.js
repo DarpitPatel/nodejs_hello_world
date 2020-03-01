@@ -11,10 +11,12 @@ response.then((success)=>{
     
     
 });*/
+// test api key eE1Riizlly8boI64jhokfviMZUjx5lA4oRj9GmH0
+//prod api key kkmpwqM4lg6LnFpH0L4zx2ytQigOcl5I3gj9ra3S
 
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
-myHeaders.append("x-api-key", "kkmpwqM4lg6LnFpH0L4zx2ytQigOcl5I3gj9ra3S");
+myHeaders.append("x-api-key", "eE1Riizlly8boI64jhokfviMZUjx5lA4oRj9GmH0");
 myHeaders.append("Authorization", token);
 
 var requestOptions = {
@@ -30,6 +32,7 @@ fetch("https://api.stellaconnect.net/v1/data/responses?start_date=2019-12-20T00:
         let obj = JSON.parse(result)
       obj.responses.forEach(function(element) {
             console.log(element.ext_interaction_id)
+
     }, this);}
 
 ).catch(error => console.log('error', error));
