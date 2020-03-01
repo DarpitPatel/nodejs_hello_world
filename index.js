@@ -1,4 +1,4 @@
-/*var http = require('http');
+var http = require('http');
 
 var server = http.createServer(function(request, response) {
 
@@ -12,7 +12,7 @@ server.listen(port);
 
 console.log("Server running at http://osc-sams.azurewebsites.net/:%d", port);
 
-*/
+
 
 var cron = require('node-cron');
 
