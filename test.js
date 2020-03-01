@@ -23,9 +23,15 @@ var requestOptions = {
  // redirect: 'follow'
 };
 
-fetch("https://api.stellaconnect.net/v1/data/responses", requestOptions)
+fetch("https://api.stellaconnect.net/v1/data/responses?start_date=2019-12-20T00:00:00-05:00&end_date=2019-12-20T00:59:59-05:00", requestOptions)
   .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then(
+      result => {
+        let obj = JSON.parse(result)
+      obj.responses.forEach(function(element) {
+            console.log(element.ext_interaction_id)
+    }, this);}
+
+).catch(error => console.log('error', error));
 
  
