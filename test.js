@@ -30,7 +30,11 @@ fetch("https://api.stellaconnect.net/v1/data/responses?start_date=2019-12-20T00:
   .then(
       result => {
         let obj = JSON.parse(result)
-      obj.responses.forEach(function(element) {
+        obj.responses.forEach(function(element) {
+            if(element.star_rating <= 3)
+            {
+
+            }
             console.log(element.ext_interaction_id)
 
     }, this);}
