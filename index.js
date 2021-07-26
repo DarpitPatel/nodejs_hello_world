@@ -10,7 +10,7 @@ var server = http.createServer(function(request, response) {
 var port = 8080;
 server.listen(port);
 
-console.log("Server running at http://osc-sams.azurewebsites.net/:%d", port);
+console.log("Server running at http://osc.ggdggdgdg.net/:%d", port);
 
 
 
@@ -18,7 +18,7 @@ var cron = require('node-cron');
 
 cron.schedule('* * * * *', () => {
  console.log('running a task every minute');
- fetch('https://agentanswercenter--tst.custhelp.com/services/rest/connect/v1.3/incidents/10654347', {
+ fetch('https://test--tst.test.com/services/rest/connect/v1.3/incidents/10654347', {
     method: 'GET',
     withCredentials: true,
     credentials: 'include',
