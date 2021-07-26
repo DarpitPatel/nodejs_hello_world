@@ -2,7 +2,7 @@ var jwt = require('jsonwebtoken');
 const fetch = require("node-fetch");
 global.Headers = fetch.Headers;
 
-var token = jwt.sign({typ:'JWT',alg:'HS256'},'87d74714-d7b8-4615-9d6d-aa7db5385576');
+var token = jwt.sign({typ:'JWT',alg:'HS256'},'6546-d7b8-6546-9d6d-6546456456');
 console.log(token);
 /*const response = fetch('https://agentanswercenter--tst.custhelp.com/services/rest/connect/v1.3/incidents/10654347',{method:"GET",headers:{"Authorization":"Basic ZDBwMDEyaDpXYWxtYXJ0MQ=="}});
 
@@ -16,7 +16,7 @@ response.then((success)=>{
 
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
-myHeaders.append("x-api-key", "eE1Riizlly8boI64jhokfviMZUjx5lA4oRj9GmH0");
+myHeaders.append("x-api-key", "6546546546546654654665465464");
 myHeaders.append("Authorization", token);
 
 var requestOptions = {
